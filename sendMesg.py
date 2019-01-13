@@ -18,12 +18,12 @@ smtpObj.login(login,passw)
 file=open("data.csv","r",encoding='utf-8')
 dat=file.read().split('\n')
 file.close()
-head=dat[0].split(',')
+head=dat[0].split(';')
 dat.pop(0)
 
 data=[]
 for i in dat:
-    data.append(i.split(','))
+    data.append(i.split(';'))
 file=open("text.txt",'r')
 text = file.read()
 file.close()
